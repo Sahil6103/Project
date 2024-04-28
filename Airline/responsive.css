@@ -1,0 +1,448 @@
+@media (min-width: 1400px) {
+  .booking {
+    height: 100vh;
+  }
+}
+
+/* ---------------1200px------------------- */
+
+@media (max-width: 1200px) {
+  .logo {
+    width: 20%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(2, 400px);
+  }
+
+  .aboutus .content {
+    gap: 50px;
+  }
+
+  .journey .card-wrapper {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+/* ---------------end 1200px------------------- */
+
+/* ---------------992px------------------- */
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  .booking,
+  .destination,
+  .student,
+  .journey,
+  .aboutus,
+  footer {
+    padding: 50px 50px;
+  }
+
+  nav ul {
+    gap: 0px;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .left-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-text p {
+    font-size: 1.1rem;
+  }
+  .destination .card-wrapper {
+    grid-template-columns: repeat(2, 350px);
+    gap: 25px;
+  }
+
+  .aboutus .content {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  footer .logo-part {
+    width: 50%;
+  }
+
+  footer .beforefly-part,
+  footer .Experience-part {
+    margin: 50px 0 0 0;
+  }
+
+  footer input {
+    width: 50%;
+  }
+
+  .journey .card-wrapper {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+/* ---------------end 992px------------------- */
+
+/* ---------------875px------------------- */
+@media (max-width: 875px) {
+  nav ul {
+    flex-direction: column;
+    align-items: end;
+  }
+  nav {
+    position: absolute;
+    flex-direction: column;
+    display: none;
+    transform: translateX(0);
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: white;
+    height: 100vh;
+  }
+
+  nav ul li {
+    margin: 10px 0 0 0;
+    padding: 0 20px;
+  }
+
+  .toggle-btn {
+    display: block;
+    order: 1;
+  }
+
+  .login {
+    margin: 0 30px 0 auto;
+  }
+
+  .logo {
+    width: 26%;
+  }
+}
+
+/* ---------------end 875px------------------- */
+
+/* ---------------768px------------------- */
+@media (max-width: 768px) {
+  .booking,
+  .destination,
+  .student,
+  .journey,
+  .aboutus,
+  footer {
+    padding: 50px 50px;
+  }
+  .logo {
+    width: 20%;
+  }
+
+  .more-btn {
+    align-self: center;
+  }
+
+  .hero .text {
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .hero .text .start {
+    align-self: center;
+    font-size: 2rem;
+  }
+
+  .hero .text .end {
+    align-self: center;
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .booking {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .booking-card {
+    margin: 20px 0;
+  }
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 450px);
+    gap: 20px;
+  }
+
+  .student .content span {
+    font-size: 0.8rem;
+  }
+
+  .student .content h1 {
+    font-size: 2.5rem;
+    margin: 30px 0;
+  }
+
+  .student .content p {
+    font-size: 1rem;
+  }
+
+  .journey .card-wrapper {
+    grid-template-columns: repeat(2, 250px);
+    gap: 15px;
+  }
+}
+
+/* ---------------end 768px------------------- */
+
+/* ---------------576px------------------- */
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .booking,
+  .destination,
+  .student,
+  .journey,
+  .aboutus,
+  footer {
+    padding: 50px 30px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .booking-card {
+    width: 100%;
+  }
+
+  .booking-card .trip-type {
+    gap: 10px;
+  }
+
+  .destination .card-wrapper {
+    gap: 30px;
+    grid-template-columns: repeat(1, 350px);
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .beforefly-part,
+  footer .Experience-part {
+    margin: 0px 0 0 0;
+  }
+
+  footer .logo-part {
+    width: 85%;
+  }
+
+  footer input {
+    width: 100%;
+  }
+
+  .journey .card-wrapper {
+    grid-template-columns: repeat(1, 280px);
+    gap: 30px;
+  }
+
+  .journey .text h1 {
+    font-size: 2rem;
+  }
+
+  .aboutus h1 {
+    font-size: 2rem;
+  }
+
+  .left-text h1 {
+    display: initial;
+  }
+}
+
+/* ---------------end 576px------------------- */
+
+/* ---------------425px------------------- */
+@media (max-width: 425px) {
+  header {
+    padding: 15px;
+  }
+
+  .booking,
+  .destination,
+  .student,
+  .journey,
+  .aboutus,
+  footer {
+    padding: 50px 15px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .form-destination {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .date-picker {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tickets {
+    flex-direction: column;
+    align-items: initial;
+    gap: 0;
+  }
+
+  .booking-card .trip-type {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 299px);
+    gap: 30px;
+  }
+
+  .student .content h1 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+}
+
+/* ---------------end 425px------------------- */
+
+/* ---------------375px------------------- */
+
+@media (max-width: 375px) {
+  .logo {
+    width: 45%;
+  }
+  header {
+    padding: 20px;
+  }
+
+  .hero .text .start,
+  .hero .text .end {
+    font-size: 1.5rem;
+  }
+
+  .hero .text h1 {
+    font-size: 3.7rem;
+  }
+
+  .hero {
+    background-position: 85% 75%;
+  }
+
+  .booking-card .trip-type {
+    gap: 10px;
+    align-items: start;
+  }
+
+  .destination .more {
+    padding: 8px 17px;
+    font-size: 1rem;
+  }
+
+  .destination h1 {
+    font-size: 1.5rem;
+  }
+
+  .destination .more {
+    padding: 10px 26px;
+    font-size: 1.1rem;
+  }
+
+  .destination .card-body .city {
+    font-size: 1.8rem;
+  }
+
+  .about-card img {
+    width: 160px;
+    height: 160px;
+  }
+
+  footer .logo-part img {
+    width: 60%;
+  }
+
+  footer .logo-part {
+    width: 100%;
+  }
+
+  .left-text h1 {
+    font-size: 2rem;
+    line-height: 45px;
+  }
+
+  .left-text p {
+    font-size: 1rem;
+  }
+
+  .booking-card {
+    padding: 25px;
+  }
+
+  .student .content h1 {
+    margin: 30px 0;
+  }
+
+  .journey .text p {
+    font-size: 0.9rem;
+  }
+
+  .journey .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutus h1 {
+    font-size: 1.8rem;
+  }
+
+  .aboutus p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------end 375px------------------- */
+
+/* ---------------320px------------------- */
+@media (max-width: 320px) {
+  header,
+  .aboutus {
+    padding: 15px 15px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 280px);
+    gap: 20px;
+  }
+
+  .student button {
+    margin: 20px 0;
+  }
+
+  .journey .text h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------------end 320px------------------- */
