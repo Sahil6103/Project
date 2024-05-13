@@ -1,0 +1,1020 @@
+@import url("https://db.onlinewebfonts.com/c/77eb99c5abc837144cabc9c07da37109?family=Emirates+Bold");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "gilroy-black";
+  src: url(fonts/gilroy-free/Gilroy-FREE/Gilroy-Light.otf);
+}
+
+@font-face {
+  font-family: "mont";
+  src: url(fonts/mont/Mont-HeavyDEMO.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--subheading);
+  font-weight: 500;
+}
+
+:root {
+  --blue-primary: #3baad8;
+  --blue-secondary: #8acaf4;
+  --light-gray: #efefef;
+  --white: #fff;
+  --text: rgb(64, 64, 64);
+  --upper: "mont";
+  --heading: "Montserrat", sans-serif;
+  --subheading: "Jost", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.booking,
+.destination,
+.student,
+.journey,
+.aboutus,
+footer,
+.login-page,
+.contact,
+.aircraft,
+.charters,
+.safety {
+  padding: 50px 80px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.content .title {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.content .subtitle {
+  font-size: 1rem;
+}
+
+.logo {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.login a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  letter-spacing: 0.5px;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.login a:hover {
+  background-color: var(--blue-secondary);
+  color: white;
+}
+
+.login a span i,
+.login a span {
+  font-size: 1.1rem;
+}
+
+.wrapper {
+  display: flex;
+  transition: all 300ms;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style-type: none;
+  transition: all 0.3s;
+}
+
+nav ul li a {
+  color: var(--text);
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  padding: 8px 15px;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--blue-secondary);
+  color: white;
+}
+
+#toggle {
+  display: none;
+}
+
+.toggle-btn {
+  display: none;
+}
+
+#toggle:checked + .wrapper nav {
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: start;
+  top: 10%;
+  right: 0;
+  height: 100%;
+  display: initial;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+/* -------------end header section------------------ */
+
+/* -------------booking section----------------------- */
+.booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("img/herobg21.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh auto;
+  font-family: var(--subheading);
+  font-weight: bolder;
+}
+
+.left-text h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: rgb(79, 163, 227);
+  font-size: 3rem;
+  line-height: 60px;
+}
+
+.left-text h1 span {
+  font-family: var(--heading);
+  font-weight: 700;
+}
+
+.left-text p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-size: 1.3rem;
+}
+
+.left-text p span {
+  font-family: var(--subheading);
+  font-weight: 500;
+}
+
+.booking-card {
+  background-color: white;
+  padding: 40px;
+}
+
+.booking-card .trip-type {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+
+.form-destination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-control input,
+.date-picker input,
+.tickets input,
+.ticket-class select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border: 1px solid;
+  border-color: #9e9e9e;
+  border-radius: 5px;
+}
+
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.tickets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.tickets .adult-ticket,
+.tickets .child-ticket,
+.tickets .ticket-class {
+  width: 100%;
+}
+
+.flight-btn .show-btn {
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: var(--blue-primary);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+/* -------------end booking section----------------------- */
+
+/* -------------destination section----------------------- */
+.destination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.destination h1 {
+  font-size: 2.2rem;
+  margin: 20px 0;
+  text-align: center;
+  font-family: var(--heading);
+  font-weight: bold;
+}
+
+.destination .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  gap: 50px;
+}
+
+.destination .card {
+  width: 100%;
+  height: fit-content;
+
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.destination .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.destination .card-img {
+  height: 50%;
+}
+
+.destination img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.destination .card-body {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.destination .card-body .country {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: var(--upper);
+}
+
+.destination .card-body .city {
+  font-size: 2rem;
+  margin: 10px 0 30px 0;
+  font-family: var(--heading);
+}
+
+.destination .card-body .discover {
+  font-size: 1.1rem;
+  font-family: var(--subheading);
+}
+
+.destination .more {
+  padding: 8px 30px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: var(--blue-primary);
+  color: var(--white);
+  margin: 20px 0;
+}
+
+/* -------------end destination section----------------------- */
+
+/* --------------student section---------------------- */
+.student {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.student::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://c.ekstatic.net/ecl/people/indoors/multiracial-students-walking-though-university-hall-w1920x480.jpg?h=cBV804tU6xA1w0McxcT2rQ");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.student .content {
+  color: white;
+}
+
+.student .content span {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-family: var(--upper);
+}
+
+.student .content h1 {
+  font-size: 3rem;
+  margin: 30px 0 10px 0;
+  font-family: var(--heading);
+  font-weight: 700;
+}
+
+.student .content p {
+  font-size: 1.2rem;
+  font-family: var(--subheading);
+  font-weight: 600;
+}
+
+.student button {
+  padding: 8px 30px;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* --------------end student section---------------------- */
+
+/* ----------------journey section---------------------- */
+
+.journey {
+  /* padding: 50px 80px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.journey .text {
+  text-align: center;
+}
+
+.journey .text span {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: var(--upper);
+}
+
+.journey .text h1 {
+  font-size: 2.5rem;
+  font-family: var(--heading);
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.journey .text p {
+  font-size: 1rem;
+  font-family: var(--subheading);
+  margin: 20px 0 0 0;
+}
+
+.journey .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  gap: 30px;
+  margin: 50px 0 0 0;
+}
+
+.journey .card {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s;
+}
+
+.journey .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.journey .card-body {
+  padding: 30px 20px 0 20px;
+}
+
+.journey .card-body span {
+  font-family: var(--upper);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.journey .card-body h1 {
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.journey .card-body p {
+  font-family: var(--subheading);
+}
+.journey img {
+  width: 100%;
+}
+
+/* ----------------end journey section---------------------- */
+
+/* --------------about us section-------------------- */
+.aboutus {
+  /* padding: 50px 80px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin: 50px 0;
+}
+
+.aboutus h1 {
+  font-family: var(--heading);
+  font-weight: 700;
+}
+
+.aboutus p {
+  font-family: var(--subheading);
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-card img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s;
+}
+
+.about-card a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--subheading);
+}
+
+.about-card:hover img {
+  transform: scale(1.1);
+}
+
+.aboutus h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.aboutus p {
+  text-align: center;
+}
+
+/* --------------end about us section-------------------- */
+
+/* ---------------footer section----------------- */
+
+footer {
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  /* gap: 50px; */
+  /* padding: 50px 80px; */
+}
+
+footer .logo-part {
+  width: 70%;
+}
+
+footer .about-part,
+footer .beforefly-part,
+footer .Experience-part {
+  width: 50%;
+}
+
+footer .logo-part img {
+  width: 50%;
+}
+
+footer .heading {
+  font-size: 1.2rem;
+  color: var(--white);
+  font-family: var(--heading);
+  font-weight: 600;
+}
+
+footer span {
+  color: rgb(169, 169, 169);
+  font-size: 0.8rem;
+}
+
+footer .subscribe .heading {
+  margin: 10px 0 0 0;
+}
+
+footer .input-field {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 0 0;
+}
+
+footer input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+}
+
+footer button {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+  padding: 8px 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+footer .social {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  margin: 30px 0 0 0;
+}
+
+footer .social a i {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 15px 0 0 0;
+}
+
+footer .links ul li {
+  list-style-type: none;
+}
+
+footer .links a {
+  color: rgb(169, 169, 169);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+}
+
+/* ---------------end footer section----------------- */
+
+/* --------------------login page-------------------- */
+
+.login-page {
+  background-image: url(img/login3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* padding: 80px 0; */
+}
+
+.login-page .content {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .content h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: var(--heading);
+}
+
+.login-page .content span {
+  font-size: 1.1rem;
+  margin: 10px 0 20px 0;
+}
+
+.login-page .login-card {
+  background-color: rgba(255, 255, 255, 0.199);
+  backdrop-filter: blur(10px);
+  width: 30%;
+  border-radius: 8px;
+  padding: 20px 30px;
+}
+
+.login-page .login-card h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 2rem;
+  margin: 0px 0 15px 0;
+}
+
+.login-page .login-card input {
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+.login-page .login-card button {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blue-primary);
+  color: var(--white);
+}
+
+.login-page .signup-link {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0 0;
+}
+
+.login-page .signup-link span {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.login-page .signup-link a {
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.login-page .signup-link a:hover {
+  background-color: var(--white);
+  color: var(--blue-primary);
+}
+
+/* --------------------end login page-------------------- */
+
+/* ---------------------signup page--------------------- */
+
+.signup {
+  background-image: url(img/login5.jpg);
+}
+
+.signup .content span {
+  width: 60%;
+}
+
+.signup .login-card {
+  width: 50%;
+}
+
+.signup .login-card .input-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---------------------end signup page--------------------- */
+
+/* ----------------------contact us page---------------------- */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .left {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.contact .input-control textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 10px;
+  border: 1px solid;
+  border-color: #9e9e9e;
+  border-radius: 5px;
+}
+
+.contact .input-control button {
+  width: 100%;
+  background-color: var(--blue-secondary);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+.contact .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 50%;
+}
+
+.contact .right .card {
+  padding: 80px 40px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-secondary);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.contact .right .card h1 {
+  font-size: 1.2rem;
+  font-family: var(--heading);
+  font-weight: 600;
+}
+
+.contact .right .card span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ----------------------end contact us page---------------------- */
+
+/* ----------------------our aircraft page------------------- */
+
+.aircraft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.crafts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 40px;
+  width: 100%;
+}
+
+.crafts .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 50px;
+  height: 300px;
+  width: 100%;
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.crafts .card h1 {
+  font-size: 2.3rem;
+  font-family: var(--heading);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.crafts .card span {
+  font-size: 1.1rem;
+}
+
+.crafts .card:nth-child(1) {
+  background-image: url(img/craft1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crafts .card:nth-child(2) {
+  background-image: url(img/craft2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crafts .card:nth-child(3) {
+  background-image: url(img/craft3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.crafts .card:nth-child(4) {
+  background-image: url(img/craft4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* ----------------------end our aircraft page------------------- */
+
+/* ----------------------charter page-------------------------- */
+
+.charters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.charter {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+}
+
+.charter .charter-image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+.charter .charter-image img {
+  width: 100%;
+}
+
+.charter .charter-detail {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.charter .charter-detail h1 {
+  font-size: 1.8rem;
+  font-family: var(--heading);
+  font-weight: 600;
+}
+
+/* ----------------------end charter page-------------------------- */
+
+/* -----------------------safety page------------------------- */
+
+.safety {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+}
+
+.safety .safety-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+}
+
+.safety .safety-card .card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 550px auto;
+}
+
+.safety .safety-card .card .card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px 20px;
+}
+
+.safety-card .card .card-detail h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--heading);
+}
+
+.safety-card .card .card-detail p {
+  font-size: 1rem;
+}
+
+.safety .card .card-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.safety .card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* -----------------------end safety page------------------------- */

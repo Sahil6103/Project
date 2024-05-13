@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+        integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' />
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <div class="logo"><img src="img/logo1.png" alt=""></div>
+        <label for="toggle" class="toggle-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="" id="toggle" />
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aircraft.html">Our AirCraft</a></li>
+                    <li><a href="safety.html">Safety</a></li>
+                    <li><a href="charters.html">Charters</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="login">
+            <a href="login.html">
+                <span><i class="fa-regular fa-circle-user"></i></span>
+                <span>Login</span>
+            </a>
+        </div>
+    </header>
+    <!-- end header section -->
+    <main>
+
+        <!-- booking section -->
+        <section class="booking">
+            <!-- <div class="container"> -->
+            <div class="left-text">
+                <h1>
+                    <span>BOOK YOUR </span>
+                    <span>FLIGHT</span>
+                    <span>TODAY</span>
+                </h1>
+                <p><span>Lorem ipsum dolor sit amet </span> <span>consectetur adipisicing elit. Ipsum praesentium</span>
+                    <span>magnam dicta
+                        consequatur
+                        assumenda labore?</span>
+                </p>
+            </div>
+            <div class="booking-card">
+                <!-- <h1>Book Your Flight</h1> -->
+                <form action="">
+                    <div class="trip-type">
+                        <div class="type1">
+                            <input type="radio" id="round" name="trip" value="round" checked>
+                            <label for="round">Roundtrip</label><br>
+                        </div>
+                        <div class="type2">
+                            <input type="radio" id="oneway" name="trip" value="oneway">
+                            <label for="round">One Way</label><br>
+                        </div>
+                        <div class="type3">
+                            <input type="radio" id="multicity" name="trip" value="multycity">
+                            <label for="round">Multicity</label><br>
+                        </div>
+                    </div>
+                    <div class="input-control form-destination">
+                        <input type="text" placeholder="Flying From">
+                        <input type="text" placeholder="Flying To">
+                    </div>
+                    <div class="input-control date-picker">
+                        <div class="departing">
+                            <label for="departing">Departing Date :</label>
+                            <input type="date" name="" id="">
+                        </div>
+                        <div class="repeating">
+                            <label for="returning date">Rerurning Date :</label>
+                            <input type="date" name="" id="" placeholder="Returning">
+                        </div>
+                    </div>
+                    <div class="tickets">
+                        <div class="adult-ticket">
+                            <label for="adult">Adults (18+)</label><br>
+                            <input type="number" name="" id="adults" value="1" min="1" max="10">
+                        </div>
+                        <div class="child-ticket">
+                            <label for="child">Children (0-17)</label><br>
+                            <input type="number" name="" id="child" value="1" min="1" max="10">
+                        </div>
+                        <div class="ticket-class">
+                            <label for="adult">Ticket Class</label><br>
+                            <select name="" id="">
+                                <option value="Economy">Economy</option>
+                                <option value="Premium Economy">Premium Economy</option>
+                                <option value="Business">Business</option>
+                                <option value="First / Suits">First / Suits</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flight-btn">
+                        <button class="show-btn">Show Flight</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </section>
+        <!-- end booking section -->
+
+        <!-- destination section -->
+        <section class="destination">
+            <h1 class="title">Featured Destination from India</h1>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/flagged/photo-1559717865-a99cac1c95d8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <span class="country">UNITED ARAB EMIRATES</span>
+                        <h1 class="city">Dubai</h1>
+                        <span class="discover">Discover for Yourself</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <span class="country">FRANCE</span>
+                        <h1 class="city">Paris</h1>
+                        <span class="discover">Discover for Yourself</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <span class="country">UNITED KINGDOM</span>
+                        <h1 class="city">London</h1>
+                        <span class="discover">Discover for Yourself</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <span class="country">UNITED STATE OF AMERICA</span>
+                        <h1 class="city">New York</h1>
+                        <span class="discover">Discover for Yourself</span>
+                    </div>
+                </div>
+            </div>
+            <button class="more">More Destination</button>
+        </section>
+
+        <!-- end destination section -->
+
+        <!-- student offer section -->
+        <section class="student">
+            <div class="content">
+                <span>SPECIAL OFFER FOR STUDENTS</span>
+                <h1>Students enjoy discounts and extras with us</h1>
+                <p>Book your travel with Airlines to enjoy special discout, extra baggage allowance and more</p>
+            </div>
+            <button>Learn More</button>
+        </section>
+        <!-- end student offer section -->
+
+        <!-- journey section -->
+        <section class="journey">
+            <div class="text">
+                <span class="subtitle">FLYING WITH AIRLINES</span>
+                <h1>Make It an Incredible Journey</h1>
+                <p>Explore the Airlines experience and plan an unforgettable trip beyond your flight.</p>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <span>CABIN FEATURES</span>
+                        <h1>First Class</h1>
+                        <p>Learn More</p>
+                    </div>
+                    <img src="https://c.ekstatic.net/ecl/food/first-class-dessert-w800x600.jpg?h=Wxf9CC7WhFAck7s5_QF1oA"
+                        alt="">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span>CABIN FEATURES</span>
+                        <h1>Business Class</h1>
+                        <p>Learn More</p>
+                    </div>
+                    <img src="https://c.ekstatic.net/ecl/food/business-class-meal-w800x600.jpg?h=MvOq0t5vAseWLn6fdsIGVg"
+                        alt="">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span>CABIN FEATURES</span>
+                        <h1>Premium Economy</h1>
+                        <p>Learn More</p>
+                    </div>
+                    <img src="https://c.ekstatic.net/ecl/food/premium-economy-menu-w800x600.jpg?h=nUi11H3iz4bSSPJ0xdtGxQ"
+                        alt="">
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span>CABIN FEATURES</span>
+                        <h1>Economy Class</h1>
+                        <p>Learn More</p>
+                    </div>
+                    <img src="https://c.ekstatic.net/ecl/food/economy-class-chocolate-dessert-w800x600.jpg?h=8IPeHQHGlgz6DFNMUYc9bQ"
+                        alt="">
+                </div>
+            </div>
+        </section>
+        <!-- end journey section -->
+
+        <!-- about us section -->
+        <section class="aboutus">
+            <h1>About Us</h1>
+            <p>Learn more about our history, our business and sustainability initiatives</p>
+            <div class="cards">
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1610642372651-fe6e7bc209ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <a href="#">Our Business</a>
+                </div>
+                <div class="about-card">
+                    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <a href="#">Our Planet</a>
+                </div>
+                <div class="about-card">
+                    <img src="https://c.ekstatic.net/ecl/emirates-staff/ground-staff/emirates-group-staff-group-photo-m300x300.jpg?h=uwsAa20y9RhQZSteKnIqmw"
+                        alt="">
+                    <a href="#">Our People</a>
+                </div>
+                <div class="about-card">
+                    <img src="https://c.ekstatic.net/ecl/about-us/family-planting-tree-w300x300.jpg?h=ar8-hQpf-unRHqmjJ_gsRA"
+                        alt="">
+                    <a href="#">Our Communities</a>
+                </div>
+            </div>
+        </section>
+        <!-- end about us section -->
+
+        <!-- footer section -->
+        <footer>
+            <div class="logo-part">
+                <img src="img/logo1.png" alt="">
+                <div class="subscribe">
+                    <h2 class="heading">Subscribe to our special offers</h2>
+                    <span>Save with our latest fares and offers.</span>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email Address">
+                        <button>Subsribe</button>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="about-part">
+                <h2 class="heading">About Us</h2>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Business</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Planet</a>
+                        </li>
+                        <li>
+                            <a href="#">Our People</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Communities</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="beforefly-part">
+                <h2 class="heading">Before You Fly</h2>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#">Baggage</a>
+                        </li>
+                        <li>
+                            <a href="#">Visa and Passport Information</a>
+                        </li>
+                        <li>
+                            <a href="#">Health</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Information</a>
+                        </li>
+                        <li>
+                            <a href="#">Rules and Notices</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Experience-part">
+                <h2 class="heading">Experience</h2>
+                <div class="links">
+                    <ul>
+                        <li>
+                            <a href="#">Cabin Features</a>
+                        </li>
+                        <li>
+                            <a href="#">What's on your Flight</a>
+                        </li>
+                        <li>
+                            <a href="#">Inflight Entertainment</a>
+                        </li>
+                        <li>
+                            <a href="#">Dining</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Lounges</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+        <!-- end footer section -->
+</body>
+
+</html>
