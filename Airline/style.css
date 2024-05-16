@@ -369,6 +369,9 @@ nav ul li a:hover {
 }
 
 .student .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
