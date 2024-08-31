@@ -1,0 +1,176 @@
+@media (min-width: 1400px) {
+  .booking {
+    height: 100vh;
+  }
+}
+
+/* --------------------------------- 1200px --------------------------------- */
+
+@media (max-width: 1200px) {
+  .logo {
+    width: 20%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+/* ------------------------------- end 1200px ------------------------------- */
+
+/* ---------------------------------- 992px --------------------------------- */
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  nav ul {
+    gap: 0px;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  .left-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-text p {
+    font-size: 1.1rem;
+  }
+
+  .aboutus .cards {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+
+/* -------------------------------- end 992px ------------------------------- */
+
+/* ---------------------------------- 875px --------------------------------- */
+@media (max-width: 875px) {
+  nav ul {
+    flex-direction: column;
+    align-items: end;
+  }
+  nav {
+    position: absolute;
+    flex-direction: column;
+    display: none;
+    transform: translateX(0);
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: white;
+    height: 100vh;
+  }
+
+  nav ul li {
+    margin: 10px 0 0 0;
+    padding: 0 20px;
+  }
+
+  .toggle {
+    display: block;
+    order: 1;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 450px);
+    gap: 20px;
+  }
+}
+
+/* -------------------------------- end 875px ------------------------------- */
+
+/* ---------------------------------- 768px --------------------------------- */
+@media (max-width: 768px) {
+  .logo {
+    width: 20%;
+  }
+
+  .more-btn {
+    align-self: center;
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .crafts {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
+}
+
+/* -------------------------------- end 768px ------------------------------- */
+
+/* ---------------------------------- 576px --------------------------------- */
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .destination .card-wrapper {
+    gap: 30px;
+    grid-template-columns: repeat(1, 350px);
+  }
+}
+
+/* -------------------------------- end 576px ------------------------------- */
+
+/* ---------------------------------- 425px --------------------------------- */
+@media (max-width: 425px) {
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 299px);
+    gap: 30px;
+  }
+}
+
+/* -------------------------------- end 425px ------------------------------- */
+
+/* ---------------------------------- 375px --------------------------------- */
+
+@media (max-width: 375px) {
+  .logo {
+    width: 45%;
+  }
+}
+
+/* -------------------------------- end 375px ------------------------------- */
+
+/* ---------------------------------- 320px --------------------------------- */
+@media (max-width: 320px) {
+  header {
+    padding: 15px 15px;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .destination .card-wrapper {
+    grid-template-columns: repeat(1, 280px);
+    gap: 20px;
+  }
+}
+
+/* -------------------------------- end 320px ------------------------------- */

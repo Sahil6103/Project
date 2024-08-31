@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+        integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' /> -->
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body>
+    <!-- header section -->
+    <!-- <header class="relative flex justify-between items-center py-[30px] px-[12px]">
+        <div class="logo w-[20%]">
+            <img src="img/logo1.webp" alt="">
+        </div>
+        <nav class="flex md:flex-row ">
+            <a href="index.html"
+                class="text-[#404040] font-[1.1rem] no-underline tracking-[0.5px] py-[8px] px-[15px] rounded-full transition-all duration-[0.3s] hover:bg-[#8acaf4] hover:text-white">Home
+            </a>
+
+            <a href="aircraft.html"
+                class="text-[#404040] font-[1.1rem] no-underline tracking-[0.5px] py-[8px] px-[15px] rounded-full transition-all duration-[0.3s] hover:bg-[#8acaf4] hover:text-white">Our
+                AirCraft
+            </a>
+
+            <a href="safety.html"
+                class="text-[#404040] font-[1.1rem] no-underline tracking-[0.5px] py-[8px] px-[15px] rounded-full transition-all duration-[0.3s] hover:bg-[#8acaf4] hover:text-white">Safety
+            </a>
+
+            <a href="charters.html"
+                class="text-[#404040] font-[1.1rem] no-underline tracking-[0.5px] py-[8px] px-[15px] rounded-full transition-all duration-[0.3s] hover:bg-[#8acaf4] hover:text-white">Charters
+            </a>
+
+            <a href="contact.html"
+                class="text-[#404040] font-[1.1rem] no-underline tracking-[0.5px] py-[8px] px-[15px] rounded-full transition-all duration-[0.3s] hover:bg-[#8acaf4] hover:text-white">Contact
+                Us
+            </a>
+
+            <div class="close md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-8 right-6" viewBox="0 0 24 24" width="24"
+                    height="24" color="#000000" fill="none">
+                    <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </nav>
+        <div class="toggle order-1 md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M4 8.5L20 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M4 15.5L20 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="login flex justify-center items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                <path
+                    d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <span>Login</span>
+        </div>
+
+    </header> -->
+    <header class="relative flex justify-between items-center py-8 px-3">
+        <div class="logo w-[20%]">
+            <img src="img/logo1.webp" alt="Logo" class="w-full">
+        </div>
+
+        <!-- Wrapper for login and toggle, using order to position them as needed -->
+        <div class="flex items-center gap-3 md:order-3">
+            <div class="login flex justify-center items-center gap-2 order-1 md:order-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                    <path
+                        d="M7.5 17C9.832 14.558 14.143 14.443 16.5 17M14.495 9.5C14.495 10.881 13.374 12 11.992 12C10.609 12 9.488 10.881 9.488 9.5C9.488 8.119 10.609 7 11.992 7C13.374 7 14.495 8.119 14.495 9.5Z"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <span class="text-[#404040] font-medium">Login</span>
+            </div>
+
+            <div class="toggle md:hidden cursor-pointer order-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path d="M4 8.5L20 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M4 15.5L20 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+
+        <nav
+            class="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center transform translate-x-full md:static md:translate-x-0 md:flex-row md:h-auto transition-transform duration-300 ease-in-out z-50 md:order-2">
+            <a href="index.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Home</a>
+            <a href="aircraft.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Our
+                AirCraft</a>
+            <a href="safety.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Safety</a>
+            <a href="charters.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Charters</a>
+            <a href="contact.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Contact
+                Us</a>
+            <div class="close absolute top-8 right-6 md:hidden cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                    <path d="M19 5L5 19M5 5L19 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+
+    <script>
+        document.querySelector(".toggle").addEventListener("click", () => {
+            document.querySelector("nav").classList.toggle("translate-x-full");
+        });
+
+        document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector("nav").classList.add("translate-x-full");
+        });
+    </script>
+
+
+
+    <!-- end header section -->
+
+
+    <!-- <script>
+        document.querySelector(".toggle").addEventListener("click", () => {
+            document.querySelector("nav").classList.add("show")
+        })
+
+        document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector("nav").classList.remove("show")
+
+        })
+    </script> -->
+</body>
+
+</html>

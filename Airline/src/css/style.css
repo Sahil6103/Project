@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://db.onlinewebfonts.com/c/77eb99c5abc837144cabc9c07da37109?family=Emirates+Bold");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "gilroy-black";
+  src: url(fonts/gilroy-free/Gilroy-FREE/Gilroy-Light.otf);
+}
+
+@font-face {
+  font-family: "mont";
+  src: url(fonts/mont/Mont-HeavyDEMO.otf);
+}
+
+:root {
+  --blue-primary: #3baad8;
+  --blue-secondary: #8acaf4;
+  --light-gray: #efefef;
+  --white: #fff;
+  --text: #404040;
+  --upper: "mont";
+  --heading: "Montserrat", sans-serif;
+  --subheading: "Jost", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--subheading);
+  font-weight: 500;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------- scrollbar -------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-primary);
+}
+
+/* ------------------------------ end scrollbar ----------------------------- */
+
+/* --------------------------------- header section --------------------------------- */
+.logo {
+  width: 15%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+@media (max-width: 320px) {
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.3s;
+  }
+}
+
+.login:hover svg {
+  color: white;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.active {
+  background-color: var(--blue-secondary);
+  color: white;
+}
+/* --------------------------- end header section --------------------------- */
+
+/* ----------------------------- booking section ---------------------------- */
+.booking {
+  background: url("../../img/hero4.webp") center/cover no-repeat;
+  font-family: var(--subheading);
+}
+
+.left-text h1 span {
+  font-family: var(--heading);
+}
+
+.left-text p span {
+  font-family: var(--subheading);
+}
+
+/* --------------------------- end booking section -------------------------- */
+
+/* --------------------------- destination section -------------------------- */
+
+.destination h1 {
+  font-family: var(--heading);
+}
+
+.destination .card-wrapper {
+  grid-template-columns: repeat(2, 500px);
+}
+
+.destination .card {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.destination .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.destination img {
+  width: 100%;
+  height: 100%;
+}
+
+.destination .card-body {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.destination .card-body .country {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: var(--upper);
+}
+
+.destination .card-body .city {
+  font-size: 2rem;
+  margin: 10px 0 30px 0;
+  font-family: var(--heading);
+}
+
+.destination .card-body .discover {
+  font-size: 1.1rem;
+  font-family: var(--subheading);
+}
+
+/* ------------------------- end destination section ------------------------ */
+
+/* ----------------------------- student section ---------------------------- */
+.student {
+  position: relative;
+  z-index: 1;
+}
+
+.student::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://c.ekstatic.net/ecl/people/indoors/multiracial-students-walking-though-university-hall-w1920x480.jpg?h=cBV804tU6xA1w0McxcT2rQ")
+    center/cover no-repeat;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.student .content span {
+  font-family: var(--upper);
+}
+
+.student .content h1 {
+  font-family: var(--heading);
+}
+
+.student .content p {
+  font-family: var(--subheading);
+}
+
+/* --------------------------- end student section -------------------------- */
+
+/* ----------------------------- journey section ---------------------------- */
+
+.journey .text span {
+  font-family: var(--upper);
+}
+
+.journey .text h1 {
+  font-family: var(--heading);
+}
+
+.journey .text p {
+  font-family: var(--subheading);
+}
+
+.journey .card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.journey .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.journey .card-body span {
+  font-family: var(--upper);
+}
+
+.journey .card-body h1 {
+  font-family: var(--heading);
+}
+
+.journey .card-body p {
+  font-family: var(--subheading);
+}
+
+/* --------------------------- end journey section -------------------------- */
+
+/* ---------------------------- about us section ---------------------------- */
+
+.aboutus h1 {
+  font-family: var(--heading);
+}
+
+.aboutus p {
+  font-family: var(--subheading);
+}
+
+.about-card a {
+  font-family: var(--subheading);
+}
+
+.about-card:hover img {
+  transform: scale(1.1);
+}
+
+/* -------------------------- end about us section -------------------------- */
+
+/* ----------------------------- footer section ----------------------------- */
+
+footer .heading {
+  font-family: var(--heading);
+}
+
+/* --------------------------- end footer section --------------------------- */
+
+/* ------------------------------- login page ------------------------------- */
+
+.login-page {
+  background: url("../../img/login3.webp") center/cover no-repeat;
+}
+
+.login-page .content h1 {
+  font-family: var(--heading);
+}
+
+.login-page .signup-link a:hover {
+  background-color: var(--white);
+  color: var(--blue-primary);
+}
+
+/* ----------------------------- end login page ----------------------------- */
+
+/* ------------------------------ sign up page ------------------------------ */
+
+.signup {
+  background-image: url("../../img/login5.webp");
+}
+
+/* ----------------------------- end signup page ---------------------------- */
+
+/* ----------------------------- contact us page ---------------------------- */
+
+.contact .right .card h1 {
+  font-family: var(--heading);
+}
+
+/* --------------------------- end contact us page -------------------------- */
+
+/* ---------------------------- our aircrift page --------------------------- */
+.crafts .card h1 {
+  font-family: var(--heading);
+}
+
+.crafts .card:nth-child(1) {
+  background: url("../../img/craft1.webp") center/cover no-repeat;
+}
+.crafts .card:nth-child(2) {
+  background: url("../../img/craft2.webp") center/cover no-repeat;
+}
+.crafts .card:nth-child(3) {
+  background: url("../../img/craft3.webp") center/cover no-repeat;
+}
+.crafts .card:nth-child(4) {
+  background: url("../../img/craft4.webp") center/cover no-repeat;
+}
+/* -------------------------- end our aircraft page ------------------------- */
+
+/* ------------------------------ charter page ------------------------------ */
+
+.charter .charter-detail h1 {
+  font-family: var(--heading);
+}
+
+/* ---------------------------- end charter page ---------------------------- */
+
+/* ------------------------------- safety page ------------------------------ */
+
+.safety .safety-card .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 550px auto;
+}
+
+.safety-card .card .card-detail h1 {
+  font-family: var(--heading);
+}
+
+/* ----------------------------- end safety page ---------------------------- */
+
+.usericon:hover .userpopup {
+  display: initial;
+}
