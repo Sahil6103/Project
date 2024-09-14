@@ -31,28 +31,6 @@ topbtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* -------------------------------- fixed header ------------------------------- */
-// let header = document.querySelector("header");
-
-// window.onscroll = () => {
-//   fixedNav();
-// };
-
-// function fixedNav() {
-//   if (
-//     document.body.scrollTop > 500 ||
-//     document.documentElement.scrollTop > 500
-//   ) {
-//     header.classList.remove("relative");
-//     header.classList.add("fixed");
-//     header.classList.add("shadow-lg");
-//   } else {
-//     header.classList.add("relative");
-//     header.classList.remove("fixed");
-//     header.classList.add("shadow-md");
-//   }
-// }
-
 // ? ----------------- import functions which is going to help for the validation of forms ------------------
 
 import {
@@ -68,10 +46,8 @@ import {
   checkFlyFrom,
   checkFlyTo,
   checkDeptDate,
-  checkReturnDate,
   checkAdultTicket,
   checkChildrenTicket,
-  checkTicketClass,
   checkLoggedIn,
 } from "./validation.js";
 
@@ -208,6 +184,7 @@ if (sendBtn) {
   });
 }
 /* ------------------------- booking form validation ------------------------ */
+import { getFlights } from "./flights.js";
 
 let showbtn = document.querySelector("#showbtn");
 
@@ -217,12 +194,43 @@ if (showbtn) {
       checkFlyFrom() == false ||
       checkFlyTo() == false ||
       checkDeptDate() == false ||
-      checkReturnDate() == false ||
       checkAdultTicket() == false ||
-      checkChildrenTicket() == false ||
-      checkTicketClass() == false
+      checkChildrenTicket() == false
     ) {
       e.preventDefault();
+    } else {
+      getFlights();
     }
   });
 }
+
+/* ----------------------------- one way flight ----------------------------- */
+
+let onewayInp = document.querySelector("#oneway");
+let returning = document.querySelector(".returning");
+let roundInp = document.querySelector("#round");
+
+if (roundInp) {
+  roundInp.addEventListener("click", () => {
+    returning.style.display = "initial";
+  });
+}
+
+if (onewayInp) {
+  onewayInp.addEventListener("click", () => {
+    returning.style.display = "none";
+  });
+}
+
+/* -------------------------- password show / hide -------------------------- */
+
+let showIcon = document.querySelector(".showicon");
+
+if (showIcon)
+  showIcon.addEventListener("click", () => {
+    if (password.type === "password") {
+      password.type = "text";
+    } else {
+      password.type = "password";
+    }
+  });

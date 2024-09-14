@@ -1,3 +1,4 @@
+// fucntion for error message
 export function errorMessage(msg) {
   let error = document.querySelector("#error");
   error.innerHTML = `
@@ -9,6 +10,7 @@ export function errorMessage(msg) {
     `;
 }
 
+// fucntion for validating email
 export function checkEmail() {
   let email = document.querySelector("#email");
   let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -24,6 +26,7 @@ export function checkEmail() {
   return true;
 }
 
+// fucntion for validating password
 export function checkPassword() {
   let password = document.querySelector("#password");
   let passwordRegex = /^[a-zA-Z0-9]{6,16}$/;
@@ -42,6 +45,7 @@ export function checkPassword() {
   return true;
 }
 
+// fucntion for validating firstname
 export function checkFirstName() {
   let firstNameRegex = /^[a-zA-Z\s-]+$/;
 
@@ -61,6 +65,7 @@ export function checkFirstName() {
   }
 }
 
+// fucntion for validating last name
 export function checkLastName() {
   let lastNameRegex = /^[a-zA-Z\s-]+$/;
 
@@ -80,6 +85,7 @@ export function checkLastName() {
   }
 }
 
+// fucntion for validating mobile number
 export function checkMobileNumber() {
   let mobileRegex = /^[6-9]\d{9}$/;
 
@@ -99,6 +105,7 @@ export function checkMobileNumber() {
   }
 }
 
+// fucntion for validating birth date
 export function checkBirthDate() {
   let bDate = document.querySelector("#bdate");
 
@@ -112,6 +119,7 @@ export function checkBirthDate() {
   return true;
 }
 
+// fucntion for validating fullanme
 export function checkFullname() {
   let fullname = document.querySelector("#fullname");
   let fullNameRegex = /^[a-zA-Z\s-]+$/;
@@ -177,17 +185,6 @@ export function checkDeptDate() {
   return true;
 }
 
-export function checkReturnDate() {
-  let retunrDate = document.querySelector("#return-date");
-
-  if (!retunrDate.value) {
-    errorMessage("Select Return Date");
-    retunrDate.focus();
-    return false;
-  }
-  return true;
-}
-
 export function checkAdultTicket() {
   let adultTicket = document.querySelector("#adult-ticket");
 
@@ -205,17 +202,6 @@ export function checkChildrenTicket() {
   if (childrenTicket.value > 10) {
     errorMessage("You can not get children tickets more than 10");
     childrenTicket.focus();
-    return false;
-  }
-  return true;
-}
-
-export function checkTicketClass() {
-  let ticketClass = document.querySelector("#ticket-class");
-
-  if (ticketClass.value == "") {
-    errorMessage("Select Ticket Class");
-    ticketClass.focus();
     return false;
   }
   return true;

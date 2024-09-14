@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines - Flights</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+        integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
+        crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body class="relative">
+
+    <!-- -------------------------- back to top button --------------------------- -->
+    <button
+        class="topbtn fixed bottom-5 md:bottom-7 right-5 md:right-7 z-10 scale-0 rounded-full w-11 h-11 md:w-12 md:h-12 bg-[#3baad8] flex justify-center items-center transition-all duration-[0.5s] shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff" fill="none"
+            class="w-6 h-6 md:w-7 md:h-7">
+            <path d="M12 4L12 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M16.9998 8.99996C16.9998 8.99996 13.3174 4.00001 11.9998 4C10.6822 3.99999 6.99982 9 6.99982 9"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+    <!-- ----------------------- end back to top button ------------------------ -->
+
+    <!-- --------------------------- whatsapp button --------------------------- -->
+    <a href="https://api.whatsapp.com/send?phone=6353670149"
+        class="fixed bottom-5 md:bottom-7 left-5 md:left-7 z-10 bg-[#25d366] w-11 h-11 md:w-12 md:h-12 rounded-full flex justify-center items-center shadow-lg"
+        target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff" fill="none"
+            class="w-6 h-6 md:w-7 md:h-7">
+            <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+            <path
+                d="M8.58815 12.3773L9.45909 11.2956C9.82616 10.8397 10.2799 10.4153 10.3155 9.80826C10.3244 9.65494 10.2166 8.96657 10.0008 7.58986C9.91601 7.04881 9.41086 7 8.97332 7C8.40314 7 8.11805 7 7.83495 7.12931C7.47714 7.29275 7.10979 7.75231 7.02917 8.13733C6.96539 8.44196 7.01279 8.65187 7.10759 9.07169C7.51023 10.8548 8.45481 12.6158 9.91948 14.0805C11.3842 15.5452 13.1452 16.4898 14.9283 16.8924C15.3481 16.9872 15.558 17.0346 15.8627 16.9708C16.2477 16.8902 16.7072 16.5229 16.8707 16.165C17 15.8819 17 15.5969 17 15.0267C17 14.5891 16.9512 14.084 16.4101 13.9992C15.0334 13.7834 14.3451 13.6756 14.1917 13.6845C13.5847 13.7201 13.1603 14.1738 12.7044 14.5409L11.6227 15.4118"
+                stroke="currentColor" stroke-width="1.5" />
+        </svg>
+    </a>
+    <!-- --------------------------- whatsapp button --------------------------- -->
+
+    <!-- --------------------------- header section ---------------------------- -->
+    <header
+        class="relative flex justify-between items-center py-5 md:py-5 px-3 md:px-8 lg:px-10 shadow-md bg-white w-full">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo1.webp" alt="Logo" class="w-full">
+            </a>
+        </div>
+
+        <!-- Wrapper for login and toggle, using order to position them as needed -->
+        <div class="flex items-center gap-3 lg:order-3">
+            <div class="login flex justify-center items-center gap-2 order-1 lg:order-none">
+                <a href="login.html"
+                    class="text-[#404040] flex justify-center items-center gap-2 font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
+                        class="transition-all duration-[0.3s]" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                        <path
+                            d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    Login
+                </a>
+            </div>
+
+            <div class="user hidden">
+                <div class="usericon relative">
+                    <span
+                        class="userinitial bg-[#8acaf4] text-white text-[1.2rem] rounded-full flex justify-center items-center w-10 h-10"></span>
+
+                    <div
+                        class="userpopup absolute hidden w-[100px] top-[45px] -left-[30px] text-center bg-white shadow-lg p-2.5 cursor-pointer">
+                        <span>Log Out</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    let userInitials = localStorage.getItem("userInitials");
+
+                    if (userInitials) {
+                        // Hide the login button
+                        document.querySelector(".login").classList.add("hidden");
+
+                        // Show the user initials and popup
+                        let userDiv = document.querySelector(".user");
+                        let userInitialSpan = userDiv.querySelector(".userinitial");
+
+                        userInitialSpan.textContent = userInitials;
+                        userDiv.classList.remove("hidden");
+
+                        // Optionally, add a click event for logout
+                        userDiv.querySelector(".userpopup").addEventListener("click", () => {
+                            localStorage.removeItem("userInitials");
+                            window.location.reload(); // Reload to reset the state
+                        });
+                    }
+                });
+            </script> -->
+
+            <div class="toggle lg:hidden cursor-pointer order-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
+                    fill="none">
+                    <path d="M4 8.5L20 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M4 15.5L20 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+
+        <nav
+            class="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-y-5 md:gap-x-4 transform translate-x-full lg:static lg:translate-x-0 lg:flex-row lg:h-auto transition-transform duration-300 ease-in-out z-50 lg:order-2">
+
+            <a href="index.html"
+                class=" text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Home</a>
+
+            <a href="aircraft.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Our
+                AirCraft</a>
+
+            <a href="safety.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Safety</a>
+
+            <a href="charters.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Charters</a>
+
+            <a href="contact.html"
+                class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Contact
+                Us</a>
+            <div class="close absolute top-8 right-4 md:top-10 md:right-8 lg:hidden cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
+                    fill="none">
+                    <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <!-- ------------------------- end header section -------------------------- -->
+
+    <section class="flights py-[50px] px-[15px] md:px-[50px] flex flex-col gap-8 md:gap-12">
+        <h1 class="font-bold text-[2.2rem]">Flights Result</h1>
+        <div id="flight-result">
+            <div class="flight-list mb-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------- footer section ---------------------------- -->
+    <footer class="bg-[#333333] py-[50px] px-[30px] md:px-[50px] flex flex-col md:flex-row  gap-[30px]">
+        <div class="logo-part w-[100%] md:w-[60%] lg:[70%]">
+            <img src="img/logo1.webp" alt="" class="w-[50%] lg:w-[40%]">
+            <div class="subscribe">
+                <h2 class="heading text-[1.2rem] text-white font-semibold mt-[20px]">Subscribe to our special offers
+                </h2>
+                <span class="text-[#a9a9a9] text-[0.8rem]">Save with our latest fares and offers.</span>
+                <div class="input-field flex justify-start gap-2.5 mt-2.5 w-[100%]">
+                    <input type="text" placeholder="Email Address"
+                        class="w-full lg:w-[50%] p-2.5 rounded-[5px] border-none">
+                    <button
+                        class="border border-solid border-white bg-transparent text-white py-[8px] px-[20px] text-center rounded-[5px]">Subsribe</button>
+                </div>
+            </div>
+            <div class="social flex justify-start items-start gap-[20px] mt-[30px]">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff"
+                        fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff"
+                        fill="none">
+                        <path
+                            d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff"
+                        fill="none">
+                        <path
+                            d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        <path
+                            d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                            stroke="currentColor" stroke-width="1.5" />
+                        <path d="M17.5078 6.5L17.4988 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#fff"
+                        fill="none">
+                        <path
+                            d="M12 20.5C13.8097 20.5 15.5451 20.3212 17.1534 19.9934C19.1623 19.5839 20.1668 19.3791 21.0834 18.2006C22 17.0221 22 15.6693 22 12.9635V11.0365C22 8.33073 22 6.97787 21.0834 5.79937C20.1668 4.62088 19.1623 4.41613 17.1534 4.00662C15.5451 3.67877 13.8097 3.5 12 3.5C10.1903 3.5 8.45489 3.67877 6.84656 4.00662C4.83766 4.41613 3.83321 4.62088 2.9166 5.79937C2 6.97787 2 8.33073 2 11.0365V12.9635C2 15.6693 2 17.0221 2.9166 18.2006C3.83321 19.3791 4.83766 19.5839 6.84656 19.9934C8.45489 20.3212 10.1903 20.5 12 20.5Z"
+                            stroke="currentColor" stroke-width="1.5" />
+                        <path
+                            d="M15.9621 12.3129C15.8137 12.9187 15.0241 13.3538 13.4449 14.2241C11.7272 15.1705 10.8684 15.6438 10.1728 15.4615C9.9372 15.3997 9.7202 15.2911 9.53799 15.1438C9 14.7089 9 13.8059 9 12C9 10.1941 9 9.29112 9.53799 8.85618C9.7202 8.70886 9.9372 8.60029 10.1728 8.53854C10.8684 8.35621 11.7272 8.82945 13.4449 9.77593C15.0241 10.6462 15.8137 11.0813 15.9621 11.6871C16.0126 11.8933 16.0126 12.1067 15.9621 12.3129Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="about-part md:w-[40%]">
+            <h2 class="heading text-[1.2rem] text-white font-semibold mt-[10px]">About Us</h2>
+            <div class="links flex flex-col justify-center items-start mt-[15px]">
+                <ul class="list-none flex flex-col gap-[10px]">
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Our Business</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Our Planet</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Our People</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Our Communities</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="beforefly-part  md:w-[40%]">
+            <h2 class="heading text-[1.2rem] text-white font-semibold mt-[10px]">Before You Fly</h2>
+            <div class="links flex flex-col justify-center items-start mt-[15px]">
+                <ul class="list-none flex flex-col gap-[10px]">
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Baggage</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Visa and Passport
+                            Information</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Health</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Travel
+                            Information</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Rules and Notices</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Experience-part md:w-[40%]">
+            <h2 class="heading text-[1.2rem] text-white font-semibold mt-[10px]">Experience</h2>
+            <div class="links flex flex-col justify-center items-start mt-[15px]">
+                <ul class="list-none flex flex-col gap-[10px]">
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Cabin Features</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">What's on your
+                            Flight</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Inflight
+                            Entertainment</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Dining</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-[#a9a9a9] no-underline mt-[5px] text-[0.9rem]">Our Lounges</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ------------------------- end footer section -------------------------- -->
+
+    <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/flights.js"></script>
+</body>
+
+</html>

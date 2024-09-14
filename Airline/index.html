@@ -117,10 +117,10 @@
         </div>
 
         <nav
-            class="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center space-y-5 md:space-y-0 md:space-x-4 transform translate-x-full lg:static lg:translate-x-0 lg:flex-row lg:h-auto transition-transform duration-300 ease-in-out z-50 lg:order-2">
+            class="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-y-5 md:gap-x-4 transform translate-x-full lg:static lg:translate-x-0 lg:flex-row lg:h-auto transition-transform duration-300 ease-in-out z-50 lg:order-2">
 
             <a href="index.html"
-                class="active text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Home</a>
+                class=" text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Home</a>
 
             <a href="aircraft.html"
                 class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Our
@@ -135,7 +135,7 @@
             <a href="contact.html"
                 class="text-[#404040] font-medium text-lg no-underline tracking-[0.5px] py-2 px-4 rounded-full transition-colors duration-300 hover:bg-[#8acaf4] hover:text-white">Contact
                 Us</a>
-            <div class="close absolute top-2 right-4 md:hidden cursor-pointer">
+            <div class="close absolute top-8 right-4 md:top-10 md:right-8 lg:hidden cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
                     fill="none">
                     <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor"
@@ -144,7 +144,6 @@
             </div>
         </nav>
     </header>
-
     <!-- ------------------------- end header section -------------------------- -->
 
     <!-- ---------------------------- main content ----------------------------- -->
@@ -170,20 +169,20 @@
                 </p>
             </div>
             <div
-                class="booking-card w-[100%] md:w-[50%] bg-white rounded-[8px] md:my-[20px] py-[30px] md:py-[40px] px-[25px] md:px-[40px]">
+                class="booking-card w-[100%] md:w-[50%] bg-white rounded-[8px] md:my-[20px] py-[30px] md:py-[40px] px-[25px] md:px-[40px] shadow-lg">
                 <div id="error"></div>
                 <form>
-                    <div
+                    <!-- <div
                         class="trip-type flex flex-col md:flex-row justify-start items-start md:items-center gap-[10px] md:gap-[40px] mt-4">
-                        <div class="type1">
-                            <input type="radio" id="round" name="trip" value="round" checked>
-                            <label for="round">Roundtrip</label><br>
-                        </div>
                         <div class="type2">
-                            <input type="radio" id="oneway" name="trip" value="oneway">
+                            <input type="radio" id="oneway" name="trip" value="oneway" checked>
                             <label for="round">One Way</label><br>
                         </div>
-                    </div>
+                        <div class="type1">
+                            <input type="radio" id="round" name="trip" value="round">
+                            <label for="round">Roundtrip</label><br>
+                        </div>
+                    </div> -->
                     <div
                         class="input-control form-destination flex flex-col md:flex-row justify-center items-center gap-0 md:gap-[20px]">
                         <input type="text" placeholder="Flying From" id="fly-from"
@@ -192,16 +191,16 @@
                             class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
                     </div>
                     <div class="input-control date-picker flex flex-col md:flex-row justify-start  gap-0 md:gap-[20px]">
-                        <div class="departing">
+                        <div class="departing w-full">
                             <label for="departing">Departing Date :</label>
                             <input type="date" name="" id="dept-date"
                                 class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
                         </div>
-                        <div class="returning">
+                        <!-- <div class="returning w-full">
                             <label for="returning date">Returning Date :</label>
                             <input type="date" name="" id="return-date"
                                 class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="tickets flex flex-col md:flex-row justify-between items-center gap-0 md:gap-[20px]">
                         <div class="adult-ticket w-[100%]">
@@ -214,7 +213,7 @@
                             <input type="number" name="" value="1" id="child-ticket"
                                 class=" w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
                         </div>
-                        <div class="ticket-class w-[100%]">
+                        <!-- <div class="ticket-class w-[100%]">
                             <label for="adult">Ticket Class</label><br>
                             <select name="" id="ticket-class"
                                 class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
@@ -224,7 +223,7 @@
                                 <option value="Business">Business</option>
                                 <option value="First / Suits">First / Suits</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="flight-btn">
                         <input type="submit" value="Show Flights" id="showbtn"
@@ -530,6 +529,7 @@
         <!-- ------------------------- end footer section -------------------------- -->
 
         <script type="module" src="src/js/main.js"></script>
+        <script type="module" src="src/js/flights.js"></script>
 </body>
 
 </html>
