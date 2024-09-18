@@ -81,30 +81,6 @@
                 </div>
             </div>
 
-            <!-- <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    let userInitials = localStorage.getItem("userInitials");
-
-                    if (userInitials) {
-                        // Hide the login button
-                        document.querySelector(".login").classList.add("hidden");
-
-                        // Show the user initials and popup
-                        let userDiv = document.querySelector(".user");
-                        let userInitialSpan = userDiv.querySelector(".userinitial");
-
-                        userInitialSpan.textContent = userInitials;
-                        userDiv.classList.remove("hidden");
-
-                        // Optionally, add a click event for logout
-                        userDiv.querySelector(".userpopup").addEventListener("click", () => {
-                            localStorage.removeItem("userInitials");
-                            window.location.reload(); // Reload to reset the state
-                        });
-                    }
-                });
-            </script> -->
-
             <div class="toggle lg:hidden cursor-pointer order-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" color="#000000"
                     fill="none">
@@ -185,10 +161,33 @@
                     </div> -->
                     <div
                         class="input-control form-destination flex flex-col md:flex-row justify-center items-center gap-0 md:gap-[20px]">
-                        <input type="text" placeholder="Flying From" id="fly-from"
+                        <input type="text" placeholder="Flying From" id="fly-from" list="cityList"
                             class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
-                        <input type="text" placeholder="Flying To" id="fly-to"
-                            class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
+                        <input type="text" placeholder="Flying To" id="fly-to" list="cityList"
+                            class=" w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
+
+                        <datalist id="cityList">
+                            <option value="Mumbai">
+                            <option value="Delhi">
+                            <option value="Bangalore">
+                            <option value="Chennai">
+                            <option value="Hyderabad">
+                            <option value="Pune">
+                            <option value="Kolkata">
+                            <option value="Ahmedabad">
+                            <option value="Jaipur">
+                            <option value="Lucknow">
+                            <option value="Goa">
+                            <option value="Nagpur">
+                            <option value="Indore">
+                            <option value="Patna">
+                            <option value="Varanasi">
+                            <option value="Bhopal">
+                            <option value="Surat">
+                            <option value="Madurai">
+                            <option value="Coimbatore">
+                            <option value="Chandigarh">
+                        </datalist>
                     </div>
                     <div class="input-control date-picker flex flex-col md:flex-row justify-start  gap-0 md:gap-[20px]">
                         <div class="departing w-full">
@@ -205,12 +204,12 @@
                     <div class="tickets flex flex-col md:flex-row justify-between items-center gap-0 md:gap-[20px]">
                         <div class="adult-ticket w-[100%]">
                             <label for="adult">Adults (18+)</label><br>
-                            <input type="number" name="" value="1" id="adult-ticket"
+                            <input type="number" name="" value="1" min="1" id="adult-ticket"
                                 class="w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
                         </div>
                         <div class="child-ticket w-[100%]">
                             <label for="child">Children (0-17)</label><br>
-                            <input type="number" name="" value="1" id="child-ticket"
+                            <input type="number" name="" value="1" min="1" id="child-ticket"
                                 class=" w-full my-[10px] p-[10px] border border-solid border-[#9e9e9e] rounded-[5px]">
                         </div>
                         <!-- <div class="ticket-class w-[100%]">

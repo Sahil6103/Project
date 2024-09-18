@@ -184,7 +184,7 @@ if (sendBtn) {
   });
 }
 /* ------------------------- booking form validation ------------------------ */
-import { getFlights } from "./flights.js";
+import getFlights from "./flights.js";
 
 let showbtn = document.querySelector("#showbtn");
 
@@ -199,6 +199,7 @@ if (showbtn) {
     ) {
       e.preventDefault();
     } else {
+      e.preventDefault();
       getFlights();
     }
   });

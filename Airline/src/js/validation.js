@@ -29,16 +29,16 @@ export function checkEmail() {
 // fucntion for validating password
 export function checkPassword() {
   let password = document.querySelector("#password");
-  let passwordRegex = /^[a-zA-Z0-9]{6,16}$/;
+  let passwordRegex = /^[a-zA-Z0-9]{6,20}$/;
 
   error.innerHTML = "";
 
   if (!password.value) {
-    errorMessage("Enter Password");
+    errorMessage("Enter Password!");
     password.focus();
     return false;
   } else if (!passwordRegex.test(password.value)) {
-    errorMessage("Invalid password format");
+    errorMessage("You have to enter password 6 to 20 letter long!");
     password.focus();
     return false;
   }
@@ -190,6 +190,10 @@ export function checkAdultTicket() {
 
   if (adultTicket.value > 20) {
     errorMessage("You can not get adult tickets more than 20");
+    adultTicket.focus();
+    return false;
+  } else if (adultTicket.value < 0) {
+    errorMessage("You can't select 0 tickets!");
     adultTicket.focus();
     return false;
   }

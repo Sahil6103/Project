@@ -3,7 +3,7 @@ let flyTo = document.querySelector("#fly-to");
 let deptDate = document.querySelector("#dept-date");
 
 // function that filter the flights according to the input and store it into session storage
-export function getFlights() {
+export default function getFlights() {
   fetch("src/flights.json")
     .then((response) => response.json())
     .then((data) => {
@@ -17,8 +17,9 @@ export function getFlights() {
       );
 
       sessionStorage.setItem("matchedFlights", JSON.stringify(matchedFlights));
-      window.location.href = "flights.html";
-    });
+      window.location.href = "/flights.html";
+    })
+    .catch((error) => console.error("Error fetching flights:", error));
 }
 
 // function that display the flights if there is no flights found then return no data found message
